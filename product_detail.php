@@ -106,7 +106,11 @@ if (isset($_SESSION['m_id'])) $user_id = $_SESSION['m_id'];
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-body {font-family: "Lato", sans-serif}
+body {
+    font-family: "FC Lamoon";
+    font-size: 22px;
+}
+
 .mySlides {display: none}
 </style>
 
@@ -138,7 +142,7 @@ body {font-family: "Lato", sans-serif}
                     <a href ="user_setting.php" class="btn">แก้ไขข้อมูลส่วนตัว</a>
                 </li>
                 <li >
-                    <a href="logout.php" class="btn.green">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn">ออกจากระบบ</a>
                 </li>
             </ul>
     </div>
@@ -171,25 +175,20 @@ if ($data = $load->fetch_assoc()):
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mt-5">
-                    <img src="img/<?= $data['p_pic'] ?>" alt="" class="img-fluid"> 
+                    <center><img src="img/<?= $data['p_pic'] ?>" width="50%" alt="" class="img-fluid"></center>
                 </div>
                 <div class="col-md-8 mt-5">
                     <span class="header-t"></span>
                     <div class="header-text" style="padding:5px;">
-                        <h1><?= $data['p_name'] ?></h1>
+                        <h1 style="font-family:FC Lamoon"><?= $data['p_name'] ?></h1>
                     </div>
                     <div class="container" style ="margin-top:3.5rem;">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4; width:100%">
                                 <div class="row">
-                                    <div class="col-md-3" style="padding:5px;">
-                                        <div class="col-icon">
-                                            <i class="fas fa-info-circle"></i>
-                                        </div>
-                                    </div>
                                     <div class="col-md-9 " style="padding:15px;">
                                         <div class="col-header">
-                                            ข้อมูลตัวเครื่อง
+                                            <i class="fas fa-info-circle"></i>  <font size="5"><strong>ข้อมูลตัวเครื่อง</strong></font>
                                         </div>
                                         <div class="col-text">
                                             <?= $data['p_detail'] ?>
@@ -198,16 +197,11 @@ if ($data = $load->fetch_assoc()):
             </div>
         </div>
                            
-                            <div class="col-md-4">
+                            <div class="col-md-4; width:100%">
                                 <div class="row">
-                                    <div class="col-md-3" style="padding:10px;">
-                                        <div class="col-icon">
-                                            <i class="fas fa-hand-holding-usd"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 " style="padding:10px;margin-top:5px">
-                                        <div class="col-header" style="color:red">
-                                           ราคาสินค้า
+                                    <div class="col-md-9" style="padding:10px;margin-top:5px">
+                                        <div class="col-header" >
+                                            <i class="fas fa-hand-holding-usd"></i>  <font color="red"><strong>ราคาสินค้า</strong></font>
                                         </div>
                                         <div class="col-text" style="line-height:20px;padding-left:20px;margin-top:5px">
                                             <?= $data['p_price'] ?>
@@ -228,7 +222,7 @@ if ($data = $load->fetch_assoc()):
                                         </select>
                                     </div>
                                         <div style="padding:5px;margin-top:10px">
-                                            <a href="view_order.php?pro_id=<?=$_GET['p_id']?>&act=add" class="btn btn-danger mt-4 form-control">กดซื้อสินค้า</a>
+                                            <a href="view_order.php?pro_id=<?=$_GET['p_id']?>&act=add" class="btn btn-danger mt-4 form-control" style="font-size:20px">กดซื้อสินค้า</a>
                                         </div>
                                     </div>
                                 </div>

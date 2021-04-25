@@ -8,47 +8,46 @@
    <!-- <link rel="shortcut icon" href="Citycons_train_icon-icons.com_67910.ico" type="images/x-icon">  -->
    
 </head>
-<body>
+<body style="background-image: url('2.png')" >
     <div class="login-container">
-        <h1> สมัครสมาชิก </h1>
+        <h1><strong> Register </strong></h1>
         <form id="form_data" method="post">
             <div class="container">
                 <div class="row">
                     
                     <div class="mb-3 col-lg-6 mt-5" >
-                        <label for="fname" class="text-white">ชื่อจริง</label>
-                        <input id="fname" type="text" name="fname" required class="form-control">
+                        <label for="fname" class="text-white"><font size="5" color="black">ชื่อจริง</font></label>
+                        <input id="fname" type="text" name="fname" placeholder="Firstname" required class="form-control">
                     </div>
                     <div class="mb-3 col-lg-6 mt-5">
-                        <label for="lname" class="text-white">นามสกุล</label>
-                        <input id="lname" type="text" name="lname" required class="form-control">
+                        <label for="lname" class="text-white"><font size="5" color="black">นามสกุล</font></label>
+                        <input id="lname" type="text" name="lname" placeholder="Lastname" required class="form-control">
                     </div>
                     <div class="mb-3 col-lg-4">
-                        <label for="date" class="text-white">วันเกิด</label>
-                        <input id="date" type="text" onfocus="(this.type='date')" name="date" required class="form-control">
+                        <label for="date" class="text-white"><font size="5" color="black">วันเกิด</font></label>
+                        <input id="date" type="text" onfocus="(this.type='date')" name="date" placeholder="Date" required class="form-control">
                     </div>
                     <div class="mb-3 col-lg-8">
-                        <label for="tel" class="text-white">เบอร์โทรศัพท์</label>
-                        <input id="tel" type="text" name="tel" maxlength="10" required class="form-control">
+                        <label for="tel" class="text-white"><font size="5" color="black">เบอร์โทรศัพท์</font></label>
+                        <input id="tel" type="text" name="tel" maxlength="10" placeholder="Phone number" required class="form-control">
                     </div>
                    
                     <div class="mb-3 col-lg-12">
-                        <label for="mail" class="text-white">Email</label>
-                        <input id="mail" type="text" name="mail"  required class="form-control">
+                        <label for="mail" class="text-white"><font size="5" color="black">Email</font></label>
+                        <input id="mail" type="text" name="mail"  placeholder="E-mail" required class="form-control">
                     </div>
                     
-                    
                     <div class="mb-3 col-lg-6">
-                        <label for="username" class="text-white">Username</label>
-                        <input id="username" type="text" name="username" required class="form-control">
+                        <label for="username" class="text-white"><font size="5" color="black">Username</font></label>
+                        <input id="username" type="text" name="username" placeholder="Username" required class="form-control">
                     </div>
                     <div class="mb-3 col-lg-6">
-                        <label for="password" class="text-white">Password</label>
-                        <input id="password" type="password" name="password" required class="form-control">
+                        <label for="password" class="text-white"><font size="5" color="black">Password</font></label>
+                        <input id="password" type="password" name="password" placeholder="Password" required class="form-control">
                     </div>
                     
                     <div class="mb-3 col-lg-12">
-                        <button id="sendData" class="btn btn-success form-control" type="button">สมัครสมาชิก</button>
+                        <button id="sendData" class="btn btn-success form-control" type="button"><font size="5" color="black">Register</font></button>
                     </div>
                 </div>
             </div>

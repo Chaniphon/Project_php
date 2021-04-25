@@ -6,29 +6,28 @@
     <title>apple.com</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body> 
+
+<body style="background-image: url('2.png')" > 
 <center>
    <div class"#CC8236">
     <div class="login-container">
-        <h1> เข้าสู่ระบบ </h1>
+        <h1 style="font-family:FC Lamoon; size: 22px; color:black"><strong> Login </strong></h1>
        
-        <form method="post">
+        <form method="post" style="font-family:FC Lamoon">
             <div class="container">
                 <div class="row">
                     <div class="mb-3 col-md-12 col-sm-12 mt-5"> 
-                         <label for="username" class="text-white">Username</label>
-                        <input id="m_username" type="text" placeholder="Username" name="username" class="form-control">
+                         <label for="username" class="text-white"><font size="6" color="black">Username</font></label>
+                        <input id="m_username" type="text" placeholder="Username" name="username" class="form-control" style="width:50%">
                     </div>
                     <div class="mb-3 col-md-12 col-sm-12">
-                    <label for="password" class="text-white" ;>Password</label>
-                        <input id="m_password" type="password" placeholder="Password" name="password" class="form-control">
-                    </div>
-                    <div class="mb-3 col-md-6 col-sm-12">
-                    <button type="button" id="sendData"class="btn btn-success form-control">เข้าสู่ระบบ</button>
-                    </div>
-                    <div class="mb-3 col-md-6 col-sm-12">
-                        <a href="register.php" class="btn btn-warning form-control">สมัครสมาชิก</a>
-                    </div>
+                    <label for="password" class="text-white"><font size="6" color="black">Password</font></label>
+                        <input id="m_password" type="password" placeholder="Password" name="password" class="form-control" style="width:50%">
+                    </div><center>
+                    <div class="mb-3 col-md-6 col-sm-12" style="width:70%">
+                    <button type="button" id="sendData"class="btn btn-success form-control"  style="width:50%"><font size="5" color="black">Login</font></button>  
+                    <a href="register.php" class="btn btn-warning form-control" style="width:50%"><font size="5" color="black">Register</font></a>                 
+                    </div></center>
                 </div>
             </div>
             </form>

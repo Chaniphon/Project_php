@@ -22,7 +22,7 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         body { 
-                font-family: 'Kanit', sans-serif !important;
+                font-family: 'FC Lamoon' !important;
                 padding:0;
                 margin:0;
                 background-color: #D3D3D3;
@@ -116,13 +116,13 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
                 </a>
             <div class="row d-inline-block align-center" style="d-flex justify-content-center">
             
-            <p class="w3-text-grey">Store House</p>
+            <p class="w3-text-grey" style="font-size:40px">Store House</p>
             </div>
             </div>
            
             
        
-        <div class="w3-bar-block">
+        <div class="w3-bar-block" style="font-size:22px">
             <a href="admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal" ><i class="fa fa-th-large fa-fw w3-margin-right" style="font-size:20px"></i>HOME</a> 
             <a href="show_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-apple fa-fw w3-margin-right" style="font-size:20px"></i>PRODUCT</a> 
             <a href="add_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-check-square fa-fw w3-margin-right" style="font-size:20px"></i>ADD PRODUCT</a> 
@@ -131,13 +131,10 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
             <a href="logout_admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-expeditedssl fa-fw w3-margin-right" style="font-size:20px"></i>LOGOUT</a>
         </div>
         
-        <div class="w3-panel w3-large d-flex justify-content-center padding:5px">
-            <i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-instagram w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-twitter w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" style="padding-right:5px"></i>
+        <div class="w3-panel w3-large d-flex justify-content-center padding:20px">
+            <a href="https://www.facebook.com/apple/"><i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:20px"></i></a>
+            <a href="https://twitter.com/Apple"><i class="fa fa-twitter w3-hover-opacity"  style="padding-right:20px"></i></a>
+            <a href="https://www.instagram.com/apple/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
         </div>
       
         </nav>
@@ -145,7 +142,7 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
         <div class="container" style="margin-top: 7.0rem!important;">
     <div class="row">
         <div class="col-lg-12" >
-            <h1 class="text-black" style="text-align:center;padding:50px">แก้ไขข้อมูลส่วนตัว</h1>
+            <h1 class="text-black" style="text-align:center; padding:50px; font-size:50px; font-family:FC Lamoon">แก้ไขข้อมูล User</h1>
             <form  method="post">
                     <div class="row my-8">
                         <?php
@@ -155,39 +152,39 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
                         if($data = $load->fetch_assoc()):
                         ?>
                         <div class="mb-3 col-lg-6 mt-5" >
-                        <label for="fname" class="text-black">ชื่อจริง</label>
-                        <input id="fname" type="text" name="fname" value="<?php echo $data['m_fname'] ?>" required class="form-control">
+                        <label for="fname" class="text-black" style="font-size:26px; font-family:FC Lamoon">ชื่อจริง</label>
+                        <input id="fname" type="text" name="fname" value="<?php echo $data['m_fname'] ?>" required class="form-control" style="font-size:22px; font-family:FC Lamoon">
                     </div>
                     <div class="mb-3 col-lg-6 mt-5">
-                        <label for="lname" class="text-black">นามสกุล</label>
-                        <input id="lname" type="text" name="lname" value="<?php echo $data['m_lname'] ?>" required class="form-control">
+                        <label for="lname" class="text-black" style="font-size:26px; font-family:FC Lamoon">นามสกุล</label>
+                        <input id="lname" type="text" name="lname" value="<?php echo $data['m_lname'] ?>" required class="form-control" style="font-size:22px; font-family:FC Lamoon">
                     </div>
                     <div class="mb-3 col-lg-4">
-                        <label for="date" class="text-black">วันเกิด</label>
-                        <input id="date" type="text" onfocus="(this.type='date')" name="date" value="<?php echo $data['m_date'] ?>" required class="form-control">
+                        <label for="date" class="text-black" style="font-size:26px; font-family:FC Lamoon">วันเกิด</label>
+                        <input id="date" type="text" onfocus="(this.type='date')" name="date" value="<?php echo $data['m_date'] ?>" required class="form-control" style="font-size:22px; font-family:FC Lamoon">
                     </div>
                     <div class="mb-3 col-lg-8">
-                        <label for="tel" class="text-black">เบอร์โทรศัพท์</label>
-                        <input id="tel" type="text" name="tel" maxlength="10" value="<?php echo $data['m_tel'] ?>" required class="form-control">
+                        <label for="tel" class="text-black" style="font-size:26px; font-family:FC Lamoon">เบอร์โทรศัพท์</label>
+                        <input id="tel" type="text" name="tel" maxlength="10" value="<?php echo $data['m_tel'] ?>" required class="form-control" style="font-size:22px; font-family:FC Lamoon">
                     </div>
                    
                     <div class="mb-3 col-lg-12">
-                        <label for="mail" class="text-black">Email</label>
-                        <input id="mail" type="text" name="mail" value="<?php echo $data['m_maill'] ?>"  required class="form-control">
+                        <label for="mail" class="text-black" style="font-size:26px; font-family:FC Lamoon">Email</label>
+                        <input id="mail" type="text" name="mail" value="<?php echo $data['m_maill'] ?>"  required class="form-control"style="font-size:22px; font-family:FC Lamoon">
                     </div>
                     
                     
                     <div class="mb-3 col-lg-6">
-                        <label for="username" class="text-black">Username</label>
-                        <input id="username" type="text" name="username" value="<?php echo $data['m_username'] ?>" required class="form-control">
+                        <label for="username" class="text-black" style="font-size:26px; font-family:FC Lamoon">Username</label>
+                        <input id="username" type="text" name="username" value="<?php echo $data['m_username'] ?>" required class="form-control" style="font-size:22px; font-family:FC Lamoon">
                     </div>
                     <div class="mb-3 col-lg-6">
-                        <label for="password" class="text-black">Password</label>
-                        <input id="password" type="password" name="password" value="<?php echo $data['m_password'] ?>" required class="form-control">
+                        <label for="password" class="text-black" style="font-size:26px; font-family:FC Lamoon">Password</label>
+                        <input id="password" type="password" name="password" value="<?php echo $data['m_password'] ?>" required class="form-control" style="font-size:22px; font-family:FC Lamoon">
                     </div>
                     <div class="mb-3 col-lg-12">
-                            <button type="button" ID="sendData" class="btn btn-outline-success" style="float: right">บันทึกข้อมูล</button>
-                        </div>
+                        <a href="show_member.php" class="btn btn-outline-success" tabindex="-1" role="button" aria-disabled="true" style="float: right"><font size="5">บันทึกข้อมูล</font></a>
+                    </div>
                     
                         <?php
                         endif;

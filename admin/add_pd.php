@@ -1,3 +1,4 @@
+
 <?php
   include "../query/connect.php";
 
@@ -40,7 +41,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         body { 
-                font-family: 'Kanit', sans-serif !important;
+                font-family: 'FC Lamoon' !important;
                 padding:0;
                 margin:0;
                 background-color: #D3D3D3;
@@ -64,7 +65,11 @@
                 /*text-shadow: 4px 2px rgb(178, 181, 182);*/
             }
 
-
+        h3 {
+            font-family: 'FC Lamoon' !important;
+            font-size: 50px;
+            color: black;
+        }
         .dropdown:hover .dropdown-content {
                 display: block;
               }
@@ -134,28 +139,25 @@
                 </a>
             <div class="row d-inline-block align-center" style="d-flex justify-content-center">
             
-            <p class="w3-text-grey">Store House</p>
+            <p class="w3-text-grey" style="font-size:40px">Store House</p>
             </div>
             </div>
            
             
        
-        <div class="w3-bar-block">
+        <div class="w3-bar-block" style="max-width:1600px; font-size:22px">
             <a href="admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal" ><i class="fa fa-th-large fa-fw w3-margin-right" style="font-size:20px"></i>HOME</a> 
             <a href="show_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-apple fa-fw w3-margin-right" style="font-size:20px"></i>PRODUCT</a> 
-            <a href="add_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-check-square fa-fw w3-margin-right" style="font-size:20px"></i>ADD PRODUCT</a> 
+            <a href="add_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class=" fa fa-check-square fa-fw w3-margin-right" style="font-size:20px"></i>ADD PRODUCT</a> 
             <a href="show_member.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw w3-margin-right" style="font-size:20px"></i>MEMBER</a> 
             <a href="admin1.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user-circle-o fa-fw w3-margin-right" style="font-size:20px"></i>ADMIN</a>
             <a href="logout_admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-expeditedssl fa-fw w3-margin-right" style="font-size:20px"></i>LOGOUT</a>
         </div>
         
-        <div class="w3-panel w3-large d-flex justify-content-center padding:5px">
-            <i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-instagram w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-twitter w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" style="padding-right:5px"></i>
+        <div class="w3-panel w3-large d-flex justify-content-center padding:20px">
+            <a href="https://www.facebook.com/apple/"><i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:20px"></i></a>
+            <a href="https://twitter.com/Apple"><i class="fa fa-twitter w3-hover-opacity"  style="padding-right:20px"></i></a>
+            <a href="https://www.instagram.com/apple/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
         </div>
       
         </nav>
@@ -169,29 +171,30 @@
         <br>
 
         <center><h3>เพิ่มสินค้า</h3>
-            <div class="row">
+            <div class="row" style="font-family:FC Lamoon">
                 <div class="mb-3 col-lg-4">
-                    <input type="text" name="p_id" placeholder="รหัสสินค้า" required class="form-control">
+                    <input type="text" name="p_id" placeholder="รหัสสินค้า" required style="font-size:22px" class="form-control">
                 </div>
                 <div class="mb-3 col-lg-4">
-                    <input type="text" name="p_name" placeholder="ชื่อสินค้า" required class="form-control">
+                    <input type="text" name="p_name" placeholder="ชื่อสินค้า" required style="font-size:22px" class="form-control">
                 </div>
                 <div class="mb-4 col-lg-4">
-                    <input type="number" name="p_price" placeholder="ราคาสินค้า" required class="form-control">
+                    <input type="number" name="p_price" placeholder="ราคาสินค้า" required style="font-size:22px" class="form-control">
                 </div>
                 
                 <div class="mb-4 col-lg-12">
-                    <textarea name="p_detail" id="editor" cols="30" rows="10" placeholder="รายละเอียด" class="form-control"></textarea>
+                    <textarea name="p_detail" id="editor" cols="30" rows="10" placeholder="รายละเอียด" style="font-size:22px" class="form-control"></textarea>
                 </div>
                 <div class="mb-31 col-lg-4">
-                <select name="cat_id" ><?php GetTypeSelect($cat_id); ?></select>
+                <select name="cat_id" style="font-size:22px"><?php GetTypeSelect($cat_id); ?></select>
                 </div>
                
                 <div class="mb-4 col-lg-12">
-                    <input type="file" class="form-control" name="p_pic" required>
+                    <input type="file" class="form-control" style="font-size:22px" name="p_pic" required>
                 </div>
-                <center><div class="mb-4 col-lg-3">
-                    <button class="btn btn-outline-danger"  type="submit" align="center">เพิ่มสินค้า</button>
+                <center>
+                <div class="mb-4 col-lg-3">
+                    <button class="btn btn-outline-danger"  type="submit" align="center"><font size="5">เพิ่มสินค้า</font></button>
                 </div>
             </div>
         </form>

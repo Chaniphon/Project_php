@@ -38,7 +38,7 @@ if($act == 'add' && !empty($p_id)){
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title>Index</title>
+    <title>History</title>
     <style>
     .dropbtn {
     background-color: #4CAF50;
@@ -86,7 +86,11 @@ if($act == 'add' && !empty($p_id)){
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-body {font-family: "Lato", sans-serif}
+body {
+    font-family: "FC Lamoon";
+    font-size: 22px;
+}
+
 .mySlides {display: none}
 </style>
 </head>
@@ -126,19 +130,19 @@ body {font-family: "Lato", sans-serif}
 
 
     <div class="dropdown w3-right w3-padding" >
-        <button class="btn btn-outline-danger">USER</button>
+        <button class="btn btn-outline-danger"><font size="4">USER</font></button>
             <ul class="dropdown-content">
                 <li>
-                    <a href ="login.php" class="btn">เข้าสู่ระบบ</a>
+                    <a href ="login.php" class="btn"><font size="4">เข้าสู่ระบบ</font></a>
                 </li>
                 <li>
-                    <a href ="user.php" class="btn">ประวัติการสั่งซื้อ</a>
+                    <a href ="user.php" class="btn"><font size="4">ประวัติการสั่งซื้อ</font></a>
                 </li>
                 <li>
-                    <a href ="user_setting.php" class="btn">แก้ไขข้อมูลส่วนตัว</a>
+                    <a href ="user_setting.php" class="btn"><font size="4">แก้ไขข้อมูลส่วนตัว</font></a>
                 </li>
                 <li >
-                    <a href="logout.php" class="btn.green">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn.green"><font size="4">ออกจากระบบ</font></a>
                 </li>
             </ul>
     </div>
@@ -153,11 +157,11 @@ body {font-family: "Lato", sans-serif}
 <div class="container" style="margin-top: 2rem!important;">
     <div class="row">
         <div class="col-lg-12">
-            <h4 style="text-align:center;padding:50px">ประวัติคำสั่งซื้อ</h4>
+            <h4 style="text-align:center; padding:50px; font-size:50px; font-family:FC Lamoon">ประวัติคำสั่งซื้อ</h4>
             
             <table class="table table-hover">
                 <thead>
-                    <tr align="center">
+                    <tr align="center" style="font-size:22px">
                         <th>ลำดับที่</th>
                         <th>รหัสการสั่งจอง</th>
                         <th>ชื่อสินค้า</th>
@@ -180,7 +184,7 @@ body {font-family: "Lato", sans-serif}
                             <td><?php echo $i += 1 ; ?></td>
                             <td><?php echo $data['p_id']; ?></td>
                             <td><?=$data['p_name']?></td>
-                            <td><?php echo date('m-F-Y ') ?></td>
+                            <td><?php echo date('d-F-Y ') ?></td>
                            
                         </tr>
                 <?php
@@ -192,7 +196,7 @@ body {font-family: "Lato", sans-serif}
             </table>
         </div>
         <div class="col-md-12 d-flex flex-row-reverse">
-            <a href="view_order.php" class="btn btn-outline-success" type="button">คำสั่งซื้อ</a>
+            <a href="view_order.php" class="btn btn-outline-success" style="font-size:22px" type="button">คำสั่งซื้อ</a>
         </div>
     </div>
 </div>

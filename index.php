@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <style>
-    .dropbtn {
+.dropbtn {
     background-color: #4CAF50;
     color: white;
     padding: 16px;
@@ -47,7 +47,7 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #f9f9f9}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -58,7 +58,12 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-body {font-family: "Lato", sans-serif}
+
+body {
+    font-family: "FC Lamoon";
+    font-size: 22px;
+}
+
 .mySlides {display: none}
 </style>
 <body>
@@ -76,19 +81,19 @@ body {font-family: "Lato", sans-serif}
 
 
     <div class="dropdown w3-right w3-padding" >
-        <button class="btn btn-outline-danger">USER</button>
+        <button class="btn btn-light"><font size="4">USER</font></button>
             <ul class="dropdown-content">
                 <li>
-                    <a href ="login.php" class="btn">เข้าสู่ระบบ</a>
+                    <a href ="login.php" class="btn"><font size="4">เข้าสู่ระบบ</font></a>
                 </li>
                 <li>
-                    <a href ="edit.php" class="btn">ประวัติการสั่งซื้อ</a>
+                    <a href ="edit.php" class="btn"><font size="4">ประวัติการสั่งซื้อ</font></a>
                 </li>
                 <li>
-                    <a href ="user_setting.php" class="btn">แก้ไขข้อมูลส่วนตัว</a>
+                    <a href ="user_setting.php" class="btn"><font size="4">แก้ไขข้อมูลส่วนตัว</font></a>
                 </li>
                 <li >
-                    <a href="logout.php" class="btn.green">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn"><font size="4">ออกจากระบบ</font></a>
                 </li>
             </ul>
     </div>
@@ -105,7 +110,7 @@ body {font-family: "Lato", sans-serif}
 
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px"> 
+<div class="w3-content" style="max-width:2000px; margin-top:46px; font-family:FC Lamoon; size:20px;"> 
 
   <!-- Automatic Slideshow Images -->
  <div class="mySlides w3-display-container w3-center">
@@ -121,7 +126,7 @@ body {font-family: "Lato", sans-serif}
     
   </div> 
 
-  <marquee style="border:#FF0033 2px SOLID">ยินดีต้อนรับสู่ Apple Store</marquee>
+  <marquee style="font-family: FC Lamoon"><font size="5">ยินดีต้อนรับสู่ Apple Store</font></marquee>
   
   <div class="container">
         <div class="row">
@@ -131,15 +136,15 @@ body {font-family: "Lato", sans-serif}
             while($data = $load->fetch_assoc()):
             ?>
             <div class="col-md-4 mt-4" >
-                <div class="card" >
+                <div class="card" style="border:0">
                   <div class="d-flex justify-content-center">
                    <img src="img/<?=$data['p_pic']?>"  height="200px" >
                   </div>
                  
                     <div class="card-body">
-                        <h5 class="card-title" align=center><?=$data['p_name']?></h5>
+                        <h5 class="card-title" align=center style="font-family:FC Lamoon"><font size="6"><?=$data['p_name']?></font></h5>
                         <div class="d-flex justify-content-center">
-                        <a href="product_detail.php?p_id=<?=$data['p_id']?>&act=add" class="btn btn-outline-danger">รายละเอียดเพิ่มเติม</a>
+                        <a href="product_detail.php?p_id=<?=$data['p_id']?>&act=add" class="btn btn-outline-danger" style="font-size:20px">รายละเอียดเพิ่มเติม</a>
                         </div>
                         <!-- <p class="card-text"><?=$data['c_details']?></p>
                          <a href="catagory.php?p_id=<?=$data['c_id']?>&act=add">-->
@@ -158,7 +163,7 @@ body {font-family: "Lato", sans-serif}
 
   
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge; font-family:FC Lamoon; size:20px">
   <p class="w3-medium">Powered by <a  target="_blank">apple @2021</a></p>
 </footer>
 

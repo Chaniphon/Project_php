@@ -95,7 +95,12 @@ if ($act == 'update') {
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-body {font-family: "Lato", sans-serif}
+
+body {
+    font-family: "FC Lamoon";
+    font-size: 22px;
+}
+
 .mySlides {display: none}
 </style>
 </head>
@@ -109,25 +114,27 @@ body {font-family: "Lato", sans-serif}
     <a href="mac.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MAC</a>
     <a href="watch.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WATCH</a>
     <a href="airpods.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">AIRPODS</a>
+
     <div class="dropdown w3-right w3-padding" >
-        <button class="btn btn-outline-danger">USER</button>
+        <button class="btn btn-light"><font size="4">USER</font></button>
             <ul class="dropdown-content">
                 <li>
-                    <a href ="login.php" class="btn">เข้าสู่ระบบ</a>
+                    <a href ="login.php" class="btn"><font size="4">เข้าสู่ระบบ</font></a>
                 </li>
                 <li>
-                    <a href ="user.php" class="btn">ประวัติการสั่งซื้อ</a>
+                    <a href ="edit.php" class="btn"><font size="4">ประวัติการสั่งซื้อ</font></a>
                 </li>
                 <li>
-                    <a href ="user_setting.php" class="btn">แก้ไขข้อมูลส่วนตัว</a>
+                    <a href ="user_setting.php" class="btn"><font size="4">แก้ไขข้อมูลส่วนตัว</font></a>
                 </li>
                 <li >
-                    <a href="logout.php" class="btn.green">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn"><font size="4">ออกจากระบบ</font></a>
                 </li>
             </ul>
     </div>
+
     <a href="view_order.php" class="w3-padding-large w3-hover-red w3-hide-small w3-right">></a>  
-<a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
 
@@ -135,9 +142,9 @@ body {font-family: "Lato", sans-serif}
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form id="frmcart" name="frmcart" method="post">
+            <form action="?act=update" id="frmcart" name="frmcart" method="post">
                 <table width="100%" border="0" align="center" class="table table-hover">
-                    <thead>
+                    <thead style="font-size:28px">
                         <td align="center"><strong>No.</strong></td>
                         <td align="center"><strong>Product</strong></td>
                         <td align="center"><strong>Product name</strong></td>
@@ -155,7 +162,7 @@ body {font-family: "Lato", sans-serif}
                         $total = 0;
 
                         foreach ($_SESSION['cart'] as $p_id => $n_pro) {
-                            $sql = "select * from product where p_id ='$p_id'";
+                            $sql = "SELECT * FROM product WHERE p_id ='$p_id'";
                             $qry = $con->query($sql);
                             while ($row = $qry->fetch_assoc()) {
 
@@ -181,7 +188,7 @@ body {font-family: "Lato", sans-serif}
                                         <?= number_format($sum, 2) ?>
                                     </td>
                                     <td align="center">
-                                        <a href="view_order.php?pro_id=<?= $p_id ?>&act=remove" class="btn btn-danger">ลบ</a>
+                                        <a href="view_order.php?pro_id=<?= $p_id ?>&act=remove" class="btn btn-danger" style="font-size:20px">Delete</a>
                                     </td>
                                 </tr>
                                 <?php
@@ -194,15 +201,15 @@ body {font-family: "Lato", sans-serif}
                         </tr>
 
                         <?php
-                    }
-                    ?>
+                            }
+                        ?>
                     <tr>
                         <td></td>
                         <td colspan="6" align="right">
-                        <a href="index.php" class="btn btn-dark"> Back </a>
-                            <a href="index.php?act=cancel" class="btn btn-danger"> Cancel Order </a>
-                            <button type="submit" name="button" id="button" class="btn btn-warning"> Recalculate Price</button>
-                            <a id="bookingData" type="button" class="btn btn-success">Confirm</a>
+                        <a href="index.php" class="btn btn-dark" style="font-size:20px"> Back </a>
+                            <a href="index.php?act=cancel" class="btn btn-danger" style="font-size:20px"> Cancel Order </a>
+                            <button type="submit" name="button" id="button" class="btn btn-warning" style="font-size:20px"> Recalculate Price</button>
+                            <a id="bookingData" type="button" class="btn btn-success" style="font-size:20px">Confirm</a>
                         </td>
                     </tr>
             </form>
@@ -220,9 +227,7 @@ body {font-family: "Lato", sans-serif}
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
 
-
-
-<script>
+        <script>
     $('#bookingData').click(function () {
         swal("คุณต้องการที่สั่งซื้อสินค้าใช่หรือไม่", {
             buttons: {

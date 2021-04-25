@@ -2,6 +2,28 @@
   session_start();
   include "../query/connect.php";
     $p_id = $_GET['id'];
+
+    function GetTypeSelect($cat_id)
+    {
+        global $con;
+        $sqltxt = mysqli_query($con,"SELECT * FROM category ORDER BY cat_id")
+        or die (mysqli_error($con));
+        if (!$sqltxt)
+        die("(FunctionDB:GetTypeSelect) SELECT category มี
+        ข้อผิดพลาด".mysql_error());
+        echo "<option value=\"\">เลือกประเภทสินค้า</option>";
+        while($result=mysqli_fetch_object($sqltxt))
+        {
+            if($result->cat_id==$ID) { //ถ้าข้อมูลที่เลือกตรงกับข้อมูลในตารางให้เลือกรายการน้ัน
+                echo "<option value=\"$result->cat_id\" selected> ";
+                echo "$result->cat_name</option>\n";
+            }
+            else { //แต่ถ้าไม่ใช่ก็จะแสดงรายการตามฐานข้อมูล
+                echo "<option value=\"$result->cat_id\">";
+                echo "$result->cat_name</option>\n";
+            }
+        }
+    }
     // LOAD CUSTOMER NAME
     /*$nsql = "select p_name from product where p_id = '$p_id'";
     $nload = $con->query($nsql);
@@ -22,7 +44,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         body { 
-                font-family: 'Kanit', sans-serif !important;
+                font-family: 'FC Lamoon' !important;
                 padding:0;
                 margin:0;
                 background-color: #D3D3D3;
@@ -45,7 +67,6 @@
                 line-height: 0.6;
                 /*text-shadow: 4px 2px rgb(178, 181, 182);*/
             }
-
 
         .dropdown:hover .dropdown-content {
                 display: block;
@@ -116,13 +137,13 @@
                 </a>
             <div class="row d-inline-block align-center" style="d-flex justify-content-center">
             
-            <p class="w3-text-grey">Store House</p>
+            <p class="w3-text-grey" style="font-size:40px">Store House</p>
             </div>
             </div>
            
             
        
-        <div class="w3-bar-block">
+        <div class="w3-bar-block" style="max-width:1600px; font-size:22px">
             <a href="admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal" ><i class="fa fa-th-large fa-fw w3-margin-right" style="font-size:20px"></i>HOME</a> 
             <a href="show_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-apple fa-fw w3-margin-right" style="font-size:20px"></i>PRODUCT</a> 
             <a href="add_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-check-square fa-fw w3-margin-right" style="font-size:20px"></i>ADD PRODUCT</a> 
@@ -131,55 +152,53 @@
             <a href="logout_admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-expeditedssl fa-fw w3-margin-right" style="font-size:20px"></i>LOGOUT</a>
         </div>
         
-        <div class="w3-panel w3-large d-flex justify-content-center padding:5px">
-            <i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-instagram w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-twitter w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" style="padding-right:5px"></i>
+        <div class="w3-panel w3-large d-flex justify-content-center padding:20px">
+            <a href="https://www.facebook.com/apple/"><i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:20px"></i></a>
+            <a href="https://twitter.com/Apple"><i class="fa fa-twitter w3-hover-opacity"  style="padding-right:20px"></i></a>
+            <a href="https://www.instagram.com/apple/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
         </div>
       
         </nav>
         <div class="container-fluid" style="padding-left:300px;">
-        <div class="container" style="margin-top: 7.0rem!important;">
+        <div class="container" >
     <div class="row">
         <div class="col-lg-12" >
-            <h1 class="text-black" style="text-align:center;padding:50px">แก้ไขข้อมูลสินค้า</h1>
+            <h1 class="text-black" style="font-size:50px; font-family:FC Lamoon">แก้ไขข้อมูลสินค้า</h1>
             <form action="" method="post" enctype="multipart/form-data">
             <br>
             <?php
-                        //include'query/log.php';
-                        $sql = "select * from product where p_id ='$p_id'";
-                        $load=  $con->query($sql);
-                        if($data = $load->fetch_assoc()):
-                        ?>
+                 //include'query/log.php';
+                $sql = "select * from product where p_id ='$p_id'";
+                $load=  $con->query($sql);
+                if($data = $load->fetch_assoc()):
+            ?>
             <div class="row">
                 <div class="mb-3 col-lg-4">
-                    <input type="text" name="p_id" placeholder="รหัสสินค้า" value="<?php echo $data['p_id'] ?>" required class="form-control">
+                    <input type="text" name="p_id" placeholder="รหัสสินค้า" value="<?php echo $data['p_id'] ?>" required style="font-size:22px" class="form-control">
                 </div>
                 <div class="mb-3 col-lg-4">
-                    <input type="text" name="p_name" placeholder="ชื่อสินค้า" value="<?php echo $data['p_name'] ?>" required class="form-control">
+                    <input type="text" name="p_name" placeholder="ชื่อสินค้า" value="<?php echo $data['p_name'] ?>" required style="font-size:22px" class="form-control">
                 </div>
                 <div class="mb-4 col-lg-4">
-                    <input type="number" name="p_price" placeholder="ราคาสินค้า" value="<?php echo $data['p_price'] ?>" required class="form-control">
+                    <input type="number" name="p_price" placeholder="ราคาสินค้า" value="<?php echo $data['p_price'] ?>" required style="font-size:22px" class="form-control">
                 </div>
                 
                 <div class="mb-4 col-lg-12">
-                    <textarea name="p_detail" id="editor" cols="30" rows="10" placeholder="รายละเอียด"class="form-control">
+                    <textarea name="p_detail" id="editor" cols="30" rows="10" placeholder="รายละเอียด" style="font-size:22px" class="form-control">
                     <?php echo $data['p_detail'] ?>
                     </textarea>
                 </div>
-                <div class="mb-4 col-lg-4">
-                <select name="cat_id" ><?php GetTypeSelect($cat_id); ?></select>
-                </div>
-                <center><div class="mb-4 col-lg-3">
-                    <button class="btn btn-outline-danger" ID="sendData" type="submit" align="center">แก้ไขสินค้า</button>
+                <div class="mb-4 col-lg-4" style="font-size:22px; font-family:FC Lamoon">
+                    <select name="cat_id" ><?php GetTypeSelect($cat_id); ?></select>
+                </div
+                <center>
+                <div class="mb-4 col-lg-3" style="font-size:22px; font-family:FC Lamoon">
+                    <a href="show_pd.php" class="btn btn-outline-success" tabindex="-1" role="button" aria-disabled="true" align="center" style="float: right"><font size="5">บันทึกข้อมูล</font></a>
                 </div>
             </div>
             <?php
-                        endif;
-                        ?>
+                endif;
+            ?>
         </form>
         </div>
     </div>

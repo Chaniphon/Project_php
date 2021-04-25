@@ -19,7 +19,7 @@ $e_id = $_SESSION['a_id'];
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         body { 
-                font-family: 'Kanit', sans-serif !important;
+                font-family: 'FC Lamoon' !important;
                 padding:0;
                 margin:0;
                 background-color: #D3D3D3;
@@ -113,13 +113,13 @@ $e_id = $_SESSION['a_id'];
                 </a>
             <div class="row d-inline-block align-center" style="d-flex justify-content-center">
             
-            <p class="w3-text-grey">Store House</p>
+            <p class="w3-text-grey" style="font-size:40px">Store House</p>
             </div>
             </div>
            
             
        
-        <div class="w3-bar-block">
+        <div class="w3-bar-block" style="font-size:20px">
             <a href="admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal" ><i class="fa fa-th-large fa-fw w3-margin-right" style="font-size:20px"></i>HOME</a> 
             <a href="show_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-apple fa-fw w3-margin-right" style="font-size:20px"></i>PRODUCT</a> 
             <a href="add_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-check-square fa-fw w3-margin-right" style="font-size:20px"></i>ADD PRODUCT</a> 
@@ -128,13 +128,10 @@ $e_id = $_SESSION['a_id'];
             <a href="logout_admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-expeditedssl fa-fw w3-margin-right" style="font-size:20px"></i>LOGOUT</a>
         </div>
         
-        <div class="w3-panel w3-large d-flex justify-content-center padding:5px">
-            <i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-instagram w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-twitter w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" style="padding-right:5px"></i>
+        <div class="w3-panel w3-large d-flex justify-content-center padding:20px">
+            <a href="https://www.facebook.com/apple/"><i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:20px"></i></a>
+            <a href="https://twitter.com/Apple"><i class="fa fa-twitter w3-hover-opacity"  style="padding-right:20px"></i></a>
+            <a href="https://www.instagram.com/apple/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
         </div>
       
         </nav>
@@ -143,9 +140,9 @@ $e_id = $_SESSION['a_id'];
     <div class="row">
         <div class="mb-3 col-lg-3">
             <div class="card text-white bg-primary mb-3">
-                <div class="card-header">จำนวนการขายทั้งหมด</div>
+                <div class="card-header" style="font-size:22px">จำนวนการขายทั้งหมด</div>
                 <div class="card-body">
-                    <div class="card-content">
+                    <div class="card-content" style="font-size:20px">
                         <?php
                             // LOAD TOTAL
                             $sql = "select count(*) as total from booking where b_id";
@@ -158,9 +155,9 @@ $e_id = $_SESSION['a_id'];
         </div>
         <div class="mb-3 col-lg-3">
             <div class="card text-white bg-info mb-3" >
-                <div class="card-header">จำนวนยอดการขายทั้งหมด</div>
+                <div class="card-header" style="font-size:22px">จำนวนยอดการขายทั้งหมด</div>
                 <div class="card-body">
-                    <div class="card-content">
+                    <div class="card-content" style="font-size:20px">
                         <?php
                             // LOAD TOTAL
                             $sql = "select sum(b_price) as total from booking";
@@ -174,9 +171,9 @@ $e_id = $_SESSION['a_id'];
         </div>
         <div class="mb-3 col-lg-3">
             <div class="card text-white bg-success mb-3" >
-                <div class="card-header">จำนวนสินค้าทั้งหมด</div>
+                <div class="card-header" style="font-size:22px">จำนวนสินค้าทั้งหมด</div>
                 <div class="card-body">
-                    <div class="card-content">
+                    <div class="card-content" style="font-size:20px">
                         <?php
                             // LOAD TOTAL
                             $sql = "select count(*) as total from product where p_id";
@@ -189,9 +186,9 @@ $e_id = $_SESSION['a_id'];
         </div>
         <div class="mb-3 col-lg-3">
             <div class="card text-white bg-warning mb-3" >
-                <div class="card-header">จำนวนสมาชิกทั้งหมด</div>
+                <div class="card-header" style="font-size:22px">จำนวนสมาชิกทั้งหมด</div>
                 <div class="card-body">
-                    <div class="card-content">
+                    <div class="card-content" style="font-size:20px">
                         <?php
                             // LOAD TOTAL
                             $sql = "select count(*) as total from member where m_id";
@@ -208,12 +205,12 @@ $e_id = $_SESSION['a_id'];
     <div class="row">
         <div class="mb-3 col-lg-12">
             <div class="round-container">
-                <div class="round-header">
-                    <a>ข้อมูลการจองล่าสุด</a>
+                <div class="round-header" style="font-size:28px">
+                    <a><strong>ข้อมูลการซื้อสินค้าล่าสุด</strong></a>
                 </div>
                 <div class="round-content" >
                     <table class="table table-hover"style="height: 200;overflow-y: scroll;">
-                        <thead>
+                        <thead style="font-size:20px">
                         <tr align="center">
                             <th>ลำดับ</th>
                             <th>รหัสการจอง</th>
@@ -234,7 +231,7 @@ $e_id = $_SESSION['a_id'];
                             $i=1;
                             while($data = $load->fetch_assoc()):
                         ?>
-                        <tr align="center" >
+                        <tr align="center" style="font-size:20px">
                             <td><?php echo $i; ?></td>
                             <td><?php echo $data['b_id'] ?></td>
                             <td><?php echo $data['m_id'] ?></td>

@@ -19,56 +19,56 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
     <link rel="stylesheet" href="css/main.css">
     <!-- END CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
-    <title>CONCERT</title>
+    <title>Edit Profile</title>
 </head>
-<body >
+<body style="background-color: #D3D3D3">
 
 <div class="container" style="margin-top: 7.0rem!important;">
     <div class="row">
         <div class="col-lg-12" >
-            <h1 class="text-white" style="text-align:center;padding:50px">แก้ไขข้อมูลส่วนตัว</h1>
+            <h1 class="text-black" style="text-align:center; padding:50px; font-size:50px; font-family:FC Lamoon">แก้ไขข้อมูลส่วนตัว</h1>
             <form  method="post">
-                    <div class="row my-8">
+                    <div class="row my-8" style="font-family:FC Lamoon">
                         <?php
                         // LOAD DATA
                         $sql ="select * from member where m_id = '$M_id'";
                         $load =$con->query($sql);
                         if($data = $load->fetch_assoc()):
-                        ?>
+                        ?> 
                         <div class="mb-3 col-lg-6 mt-5" >
-                        <label for="fname" class="text-white">ชื่อจริง</label>
-                        <input id="fname" type="text" name="fname" value="<?php echo $data['m_fname'] ?>" required class="form-control">
+                        <label for="fname" class="text-white" style="font-size:26px; font-family:FC Lamoon">ชื่อจริง</label>
+                        <input id="fname" type="text" name="fname" value="<?php echo $data['m_fname'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                     <div class="mb-3 col-lg-6 mt-5">
-                        <label for="lname" class="text-white">นามสกุล</label>
-                        <input id="lname" type="text" name="lname" value="<?php echo $data['m_lname'] ?>" required class="form-control">
+                        <label for="lname" class="text-white" style="font-size:26px; font-family:FC Lamoon">นามสกุล</label>
+                        <input id="lname" type="text" name="lname" value="<?php echo $data['m_lname'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                     <div class="mb-3 col-lg-4">
-                        <label for="date" class="text-white">วันเกิด</label>
-                        <input id="date" type="text" onfocus="(this.type='date')" name="date" value="<?php echo $data['m_date'] ?>" required class="form-control">
+                        <label for="date" class="text-white" style="font-size:26px; font-family:FC Lamoon">วันเกิด</label>
+                        <input id="date" type="text" onfocus="(this.type='date')" name="date" value="<?php echo $data['m_date'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                     <div class="mb-3 col-lg-8">
-                        <label for="tel" class="text-white">เบอร์โทรศัพท์</label>
-                        <input id="tel" type="text" name="tel" maxlength="10" value="<?php echo $data['m_tel'] ?>" required class="form-control">
+                        <label for="tel" class="text-white" style="font-size:26px; font-family:FC Lamoon">เบอร์โทรศัพท์</label>
+                        <input id="tel" type="text" name="tel" maxlength="10" value="<?php echo $data['m_tel'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                    
                     <div class="mb-3 col-lg-12">
-                        <label for="mail" class="text-white">Email</label>
-                        <input id="mail" type="text" name="mail" value="<?php echo $data['m_maill'] ?>"  required class="form-control">
+                        <label for="mail" class="text-white" style="font-size:26px; font-family:FC Lamoon">Email</label>
+                        <input id="mail" type="text" name="mail" value="<?php echo $data['m_maill'] ?>"  required style="font-size:22px" class="form-control">
                     </div>
                     
                     
                     <div class="mb-3 col-lg-6">
-                        <label for="username" class="text-white">Username</label>
-                        <input id="username" type="text" name="username" value="<?php echo $data['m_username'] ?>" required class="form-control">
+                        <label for="username" class="text-white" style="font-size:26px; font-family:FC Lamoon">Username</label>
+                        <input id="username" type="text" name="username" value="<?php echo $data['m_username'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                     <div class="mb-3 col-lg-6">
-                        <label for="password" class="text-white">Password</label>
-                        <input id="password" type="password" name="password" value="<?php echo $data['m_password'] ?>" required class="form-control">
+                        <label for="password" class="text-white" style="font-size:26px; font-family:FC Lamoon">Password</label>
+                        <input id="password" type="password" name="password" value="<?php echo $data['m_password'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                     <div class="mb-3 col-lg-12">
-                            <button type="button" ID="sendData" class="btn btn-outline-success" style="float: right">บันทึกข้อมูล</button>
-                        </div>
+                        <button type="button" ID="sendData" class="btn btn-outline-success" style="float: right; font-size:22px">บันทึกข้อมูล</button>
+                    </div>
                     
                         <?php
                         endif;

@@ -20,7 +20,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         body { 
-                font-family: 'Kanit', sans-serif !important;
+                font-family: 'FC Lamoon' !important;
                 padding:0;
                 margin:0;
                 background-color: #D3D3D3;
@@ -114,13 +114,13 @@
                 </a>
             <div class="row d-inline-block align-center" style="d-flex justify-content-center">
             
-            <p class="w3-text-grey">Store House</p>
+            <p class="w3-text-grey" style="font-size:40px">Store House</p>
             </div>
             </div>
            
             
        
-        <div class="w3-bar-block">
+        <div class="w3-bar-block" style="font-size:22px">
             <a href="admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal" ><i class="fa fa-th-large fa-fw w3-margin-right" style="font-size:20px"></i>HOME</a> 
             <a href="show_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-apple fa-fw w3-margin-right" style="font-size:20px"></i>PRODUCT</a> 
             <a href="add_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-check-square fa-fw w3-margin-right" style="font-size:20px"></i>ADD PRODUCT</a> 
@@ -129,20 +129,17 @@
             <a href="logout_admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-expeditedssl fa-fw w3-margin-right" style="font-size:20px"></i>LOGOUT</a>
         </div>
         
-        <div class="w3-panel w3-large d-flex justify-content-center padding:5px">
-            <i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-instagram w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-snapchat w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-pinterest-p w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-twitter w3-hover-opacity" style="padding-right:5px"></i>
-            <i class="fa fa-linkedin w3-hover-opacity" style="padding-right:5px"></i>
+        <div class="w3-panel w3-large d-flex justify-content-center padding:20px">
+            <a href="https://www.facebook.com/apple/"><i class="fa fa-facebook-official w3-hover-opacity" style="padding-right:20px"></i></a>
+            <a href="https://twitter.com/Apple"><i class="fa fa-twitter w3-hover-opacity"  style="padding-right:20px"></i></a>
+            <a href="https://www.instagram.com/apple/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
         </div>
       
         </nav>
         <div class="container-fluid" style="padding-left:300px;">
             <div class="row">
                 <div class="col-12 mb-3">
-                <h1>ข้อมูลพนักงาน</h1>
+                <h1 style="font-size:50px; font-family:FC Lamoon">ข้อมูลพนักงาน</h1>
                 </div>
                 <div class="col-12">
                 <table width="700" align="center"  bgcolor="white" style="border-radius:6px" cellspacing="15px" padding="14px">
@@ -150,7 +147,7 @@
             <thead>
         <table width="1000px" align="center" bgcolor="white" style="border-radius:6px padding-left:300px" cellspacing="10px" >
             <thead>
-                <tr style="align:center">
+                <tr style="align:center; font-size:22px">
                     <td width="50">ID</td>
                     <td width="50">picture</td>
                     <td width="70">name</td>
@@ -173,10 +170,10 @@
                   
                 ?>
                 <td><img  width="100px" src="../img/<?php echo $row['a_pic'] ?>" alt=""></td>
-                <td class="a_name"><?php echo $row['a_name']; ?></td>
-                <td class="a_tel"><?php echo $row['a_tel']; ?></td>   
-                <td align="center"> <a href="edit_admin.php?a_id=<?=$row['a_id']?>" class="btn btn-danger">Edit</a></td>
-                <td align="center"> <a href="delete_admin.php?a_id=<?php echo $row['a_id'];?>"  class="btn btn-warning">Delete</a></td>
+                <td class="a_name" style="font-size:20px"><?php echo $row['a_name']; ?></td>
+                <td class="a_tel" style="font-size:20px"><?php echo $row['a_tel']; ?></td>   
+                <td align="center"> <a href="edit_admin.php?a_id=<?=$row['a_id']?>" class="btn btn-danger" style="font-size:20px">Edit</a></td>
+                <td align="center"> <a href="delete_admin.php?a_id=<?php echo $row['a_id'];?>"  class="btn btn-warning" style="font-size:20px">Delete</a></td>
                 </tr>
                 <?php endwhile ?>
 

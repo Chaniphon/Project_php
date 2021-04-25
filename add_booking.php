@@ -14,11 +14,11 @@ if (!empty($_SESSION['cart'])) {
         $price = $data['p_price'] * $qty;
         $insert = "INSERT into booking (m_id,p_id,n_pro,b_price,b_save) values ('$M_id','$p_id','$qty','$price',CURRENT_TIMESTAMP)";
        if($con->query($insert)){
-        echo json_encode(array("status" => 1, "text" => "ทำการจองสำเร็จ"));
+        echo json_encode(array("status" => 1, "text" => "ทำการสั่งซื้อสำเร็จ"));
 
        }
        else {
-    echo json_encode(array("status" => 2, "text" => "ทำการจองไม่สำเร็จ"));
+    echo json_encode(array("status" => 2, "text" => "ทำการสั่งซื้อไม่สำเร็จ"));
 
        }
 }

@@ -10,7 +10,7 @@ include 'query/connect.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Receipt</title>
 </head>
 <script>
     //window.print();
@@ -20,6 +20,8 @@ include 'query/connect.php';
         padding:0px;
         margin:0px;
         overflow-x:hidden;
+        font-family: "FC Lamoon";
+        font-size: 22px;
     }
     table{
         padding:0 25px;
@@ -48,9 +50,7 @@ border-radius: 5px;
        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:1rem;">
         <tr>
             <td align="center"colspan=4>
-                หอพักหญิง มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ<br>
-                129 หมู่ 21 ตำบลเนินหอม อำเภอเมืองปราจีนบุรี</br>
-                จังหวัดปราจีนบุรี 25230
+                <font size="10">Apple Store </font>
             </td>
         </tr>
         <tr>
@@ -60,13 +60,13 @@ border-radius: 5px;
         </tr>
         <tr>
             <td colspan=4>
-                <?php echo "วันที่: " . date("d-m-Y H:i:s")?>
+                <?php echo "วันที่ : " . date("d-m-Y H:i:s")?>
             </td>
             
         </tr>
         <tr>
             <td colspan=4>
-                <?php echo "ลูกค้า: " . $data_name['m_fname'] .' '. $data_name['m_lname']?>
+                <?php echo "ลูกค้า : " . $data_name['m_fname'] .' '. $data_name['m_lname']?>
             </td>
         </tr>
         <tr align="center" height="50px" class="hr">
@@ -126,6 +126,15 @@ border-radius: 5px;
                 <b>7%</b>
             </td>
         </tr>
+        <tr class="hr_line" height="50px">
+            <td></td>
+            <td colspan=2 align=center>
+                การจัดส่ง
+            </td>
+            <td align=right>
+                <b>ฟรี</b>
+            </td>
+        </tr>
         <tr height="60px">
             <td colspan=2 style="border-bottom:1px solid">
                 <strong>ยอดชำระทั้งหมด</strong>
@@ -145,12 +154,13 @@ border-radius: 5px;
                 <strong>ติดต่อ</strong>
             </td>
             <td colspan=2 align=right>
-                โทร: +66 92 7503 465
+                โทร : +66 98 5532 441 <br>
+                โทร : +66 90 9844578
             </td>
         </tr>
         <tr >
             <td colspan=4 align=center>
-                <img src="img/QR_code.jpg" width="20%" alt="">
+                <img src="img/QRcode.jpg" width="20%" alt="">
             </td>
         </tr>
         <tr>

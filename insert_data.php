@@ -44,9 +44,7 @@
             $root -> appendChild($link);
 
         }
-
-        
-
+      
         $dom->appendChild($root);
         $dom->save($filePath);
     }
