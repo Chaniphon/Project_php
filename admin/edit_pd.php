@@ -164,7 +164,7 @@
     <div class="row">
         <div class="col-lg-12" >
             <h1 class="text-black" style="font-size:50px; font-family:FC Lamoon">แก้ไขข้อมูลสินค้า</h1>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="process_pd.php" method="post" enctype="multipart/form-data">
             <br>
             <?php
                  //include'query/log.php';
@@ -193,7 +193,7 @@
                 </div
                 <center>
                 <div class="mb-4 col-lg-3" style="font-size:22px; font-family:FC Lamoon">
-                    <a href="show_pd.php" class="btn btn-outline-success" tabindex="-1" role="button" aria-disabled="true" align="center" style="float: right"><font size="5">บันทึกข้อมูล</font></a>
+                    <input type = "submit" value = "บันทึกข้อมูล" name = "submit" style="font-size:22px" class= "btn btn-outline-success">
                 </div>
             </div>
             <?php

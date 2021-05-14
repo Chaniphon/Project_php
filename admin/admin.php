@@ -212,14 +212,14 @@ $e_id = $_SESSION['a_id'];
                     <table class="table table-hover"style="height: 200;overflow-y: scroll;">
                         <thead style="font-size:20px">
                         <tr align="center">
-                            <th>ลำดับ</th>
-                            <th>รหัสการจอง</th>
-                            <th>รหัสสมาชิก</th>
-                            <th>ชื่อสมาชิก</th>
-                            <th>รหัสสินค้า</th>
-                            <th>จำนวน</th>
-                            <th>รวมราคา</th>
-                            <th>ปี/เดือน/วัน/เวลา</th>
+                            <th><center>ลำดับ</center></th>
+                            <th><center>รหัสการจอง</center></th>
+                            <th><center>รหัสสมาชิก</center></th>
+                            <th><center>ชื่อสมาชิก</center></th>
+                            <th><center>รหัสสินค้า</center></th>
+                            <th><center>จำนวน</center></th>
+                            <th><center>รวมราคา</center></th>
+                            <th><center>ปี/เดือน/วัน/เวลา</center></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -232,14 +232,14 @@ $e_id = $_SESSION['a_id'];
                             while($data = $load->fetch_assoc()):
                         ?>
                         <tr align="center" style="font-size:20px">
-                            <td><?php echo $i; ?></td>
-                            <td><?php echo $data['b_id'] ?></td>
-                            <td><?php echo $data['m_id'] ?></td>
-                            <td class="fname"><?php echo $data['m_fname'] ?></td>
-                            <td><?php echo $data['p_id'] ?></td>
-                            <td><?php echo $data['n_pro'] ?></td>
-                            <td><?php echo $data['b_price'] ?></td>
-                            <td><?php echo $data['b_save'] ?></td>
+                            <td><?php echo "<center>"; echo $i; ?></td>
+                            <td><?php echo "<center>"; echo $data['b_id'] ?></td>
+                            <td><?php echo "<center>"; echo $data['m_id'] ?></td>
+                            <td class="fname"><?php echo "<center>"; echo $data['m_fname'] ?></td>
+                            <td><?php echo "<center>"; echo $data['p_id'] ?></td>
+                            <td><?php echo "<center>"; echo $data['n_pro'] ?></td>
+                            <td><?php echo "<center>"; echo $data['b_price'] ?></td>
+                            <td><?php echo "<center>"; echo $data['b_save'] ?></td>
                         </tr>
                         <?php
                             $i++;

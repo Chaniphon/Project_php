@@ -130,19 +130,19 @@ body {
 
 
     <div class="dropdown w3-right w3-padding" >
-        <button class="btn btn-outline-danger">USER</button>
+        <button class="btn btn-light"><font size="4">USER</font></button>
             <ul class="dropdown-content">
                 <li>
-                    <a href ="login.php" class="btn">เข้าสู่ระบบ</a>
+                    <a href ="login.php" class="btn"><font size="4">เข้าสู่ระบบ</font></a>
                 </li>
                 <li>
-                <a href ="edit.php" class="btn">ประวัติการสั่งซื้อ</a>
+                    <a href ="edit.php" class="btn"><font size="4">ประวัติการสั่งซื้อ</font></a>
                 </li>
                 <li>
-                    <a href ="user_setting.php" class="btn">แก้ไขข้อมูลส่วนตัว</a>
+                    <a href ="user_setting.php" class="btn"><font size="4">แก้ไขข้อมูลส่วนตัว</font></a>
                 </li>
                 <li >
-                    <a href="logout.php" class="btn">ออกจากระบบ</a>
+                    <a href="logout.php" class="btn"><font size="4">ออกจากระบบ</font></a>
                 </li>
             </ul>
     </div>

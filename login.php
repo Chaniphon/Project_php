@@ -25,7 +25,7 @@
                         <input id="m_password" type="password" placeholder="Password" name="password" class="form-control" style="width:50%">
                     </div><center>
                     <div class="mb-3 col-md-6 col-sm-12" style="width:70%">
-                    <button type="button" id="sendData"class="btn btn-success form-control"  style="width:50%"><font size="5" color="black">Login</font></button>  
+                    <button type="button" id="sendData"class="btn btn-success form-control" style="width:50%"><font size="5" color="black">Login</font></button>  
                     <a href="register.php" class="btn btn-warning form-control" style="width:50%"><font size="5" color="black">Register</font></a>                 
                     </div></center>
                 </div>

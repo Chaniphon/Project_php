@@ -3,11 +3,10 @@
   include "../query/connect.php";
   $sql = "SELECT * FROM product
   INNER JOIN category ON product.p_cat = category.cat_id
-  WHERE product.p_id";
+  ORDER BY  product.p_id";
   $result = $con->query($sql);
-  $data = mysqli_fetch_array($result);
   $Path="../img/"; //ระบุ path ของไฟล์รูปภาพที่จัดเก็บไว้ใน server
-  $image = "<img src=$Path$data[p_pic] valign=middle align = center"
+  $image = "<img src=$Path$[p_pic] valign=middle align = center"
 ?>
  
 <!DOCTYPE html>
@@ -144,30 +143,30 @@
         <div class="container-fluid" style="padding-left:300px;">
         <p align = "center" width="25" style="font-size:50px">PRODUCT</p>
         <BR>
-        <table width="800" border="0" bgcolor="#FFFFFF" align = "center" >
+        <table width="1000" border="0" bgcolor="#FFFFFF" align = "center" >
             <thead style="font-size:22px">
                 <tr>
-                    <td width="25">#</td>
-                    <td width="60">ชื่อสินค้า</td>
-                    <td width="1000">รายละเอียดสินค้า</td>
-                    <td width="50">ราคาสินค้า</td>
-                    <td width="50">รูปสินค้า</td>
-                    <td width="50">ประเภทสินค้า</td>
-                    <td width="100">แก้ไข</td>
-                    <td width="100">ลบ</td>
+                    <<td width="150"><strong><center>#</center></strong></td>
+                    <td width="400"><strong><center>ชื่อสินค้า</center></strong></td>
+                    <td width="1000"><strong><center>รายละเอียดสินค้า</center></strong></td>
+                    <td width="250"><strong><center>ราคาสินค้า</center></strong></td>
+                    <<td width="600"><strong><center>รูปสินค้า</center></strong></td>
+                    <td width="300"><strong><center>ประเภทสินค้า</center></strong></td>
+                    <td width="100"><strong><center>Edit</center></strong></td>
+                    <td width="100"><strong><center>Delete</center></strong></td>
                 </tr>
             </thead>
             <tbody style="font-size:20px">
             <?php while($row = $result->fetch_assoc()): ?>
                 <tr>
-                <td><?php echo $row['p_id']; ?></td>
-                <td class="fname"><?php echo $row['p_name']; ?></td>
+                <td><?php echo "<center>"; echo $row['p_id']; ?></td>
+                <td class="fname"><?php echo "<center>"; echo $row['p_name']; ?></td>
                 <td><?php echo $row['p_detail']; ?></td>
-                <td><?php echo $row['p_price']; ?></td>
-                <td ><img src="../img/<?=$row['p_pic']?>" width="150%"> </td>
-                <td width = "200"><?php echo $row['cat_name']; ?></td>
-                <td align="center"> <a href="edit_pd.php?id=<?=$row['p_id']?>" class="btn btn-warning" style="font-size:21px">Edit</a></td>
-                <td align="center"> <a href="delete_pd.php?p_id=<?php echo $row['p_id'];?>" class="btn btn-danger" style="font-size:21px">Delete</a></td>
+                <td><?php echo "<center>"; echo $row['p_price']; ?></td>
+                <td ><img src="../img/<?=$row['p_pic']?>" width="100%"> </td>
+                <td ><center><?php echo $row['cat_name']; ?></center></td>
+                <td><center> <a href="edit_pd.php?id=<?=$row['p_id']?>" class="btn btn-warning" style="font-size:21px">Edit</a></center></td>
+                <td><center> <a href="delete_pd.php?p_id=<?php echo $row['p_id'];?>" class="btn btn-danger" style="font-size:21px">Delete</a></center></td>
                 </tr>
                 <?php endwhile ?>
 

@@ -196,7 +196,7 @@ body {
             </table>
         </div>
         <div class="col-md-12 d-flex flex-row-reverse">
-            <a href="view_order.php" class="btn btn-outline-success" style="font-size:22px" type="button">คำสั่งซื้อ</a>
+            <a href="view_order.php" class="btn btn-outline-success" style="font-size:22px" type="button">Order</a>
         </div>
     </div>
 </div>

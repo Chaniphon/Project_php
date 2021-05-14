@@ -35,8 +35,8 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
                         $load =$con->query($sql);
                         if($data = $load->fetch_assoc()):
                         ?> 
-                        <div class="mb-3 col-lg-6 mt-5" >
-                        <label for="fname" class="text-white" style="font-size:26px; font-family:FC Lamoon">ชื่อจริง</label>
+                    <div class="mb-3 col-lg-6 mt-5" >
+                        <label for="fname" class="text-white" style="font-size:26px; font-family:FC Lamoon; font-color:black">ชื่อจริง</label>
                         <input id="fname" type="text" name="fname" value="<?php echo $data['m_fname'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                     <div class="mb-3 col-lg-6 mt-5">
@@ -67,7 +67,18 @@ if($ndata = $nload->fetch_assoc()) $fname = $ndata['m_fname'];
                         <input id="password" type="password" name="password" value="<?php echo $data['m_password'] ?>" required style="font-size:22px" class="form-control">
                     </div>
                     <div class="mb-3 col-lg-12">
-                        <button type="button" ID="sendData" class="btn btn-outline-success" style="float: right; font-size:22px">บันทึกข้อมูล</button>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:1rem;">
+                        <tr>
+                            <td></td>
+                            <td colspan="6" align="right">
+                                <button type="button" ID="sendData" class="btn btn-success" style="float: right; font-size:22px">บันทึกข้อมูล</button> 
+                            </td>
+                            <td></td>
+                            <td colspan="6" align="right">
+                                <button type= "button" class="btn btn-danger" onclick="window.location.href='/PROJECT_PHP/index.php'" style="float: right; font-size:22px">กลับหน้าหลัก</button>
+                            </td>
+                        </tr>
+                    </table>
                     </div>
                     
                         <?php

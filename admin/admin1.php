@@ -148,12 +148,12 @@
         <table width="1000px" align="center" bgcolor="white" style="border-radius:6px padding-left:300px" cellspacing="10px" >
             <thead>
                 <tr style="align:center; font-size:22px">
-                    <td width="50">ID</td>
-                    <td width="50">picture</td>
-                    <td width="70">name</td>
-                    <td width="70">tel</td>
-                    <td width="100">edit</td>
-                    <td width="100">delete</td>
+                    <td width="100"><center>#</center></td>
+                    <td width="150"><center>รูปภาพ</center></td>
+                    <td width="100"><center>ชื่อ</center></td>
+                    <td width="100"><center>เบอร์โทร</center></td>
+                    <td width="70"><center>edit</center></td>
+                    <td width="70"><center>delete</center></td>
                 </tr>
             </thead>
             <tbody>
@@ -165,15 +165,15 @@
             
             while($row = $result->fetch_assoc()): ?>
                 <tr>
-                <td><?php echo $row['a_id']; ?></td>
+                <td style="font-size:20px"><?php echo "<center>"; echo $row['a_id']; ?></td>
                 <?php
                   
                 ?>
-                <td><img  width="100px" src="../img/<?php echo $row['a_pic'] ?>" alt=""></td>
-                <td class="a_name" style="font-size:20px"><?php echo $row['a_name']; ?></td>
-                <td class="a_tel" style="font-size:20px"><?php echo $row['a_tel']; ?></td>   
-                <td align="center"> <a href="edit_admin.php?a_id=<?=$row['a_id']?>" class="btn btn-danger" style="font-size:20px">Edit</a></td>
-                <td align="center"> <a href="delete_admin.php?a_id=<?php echo $row['a_id'];?>"  class="btn btn-warning" style="font-size:20px">Delete</a></td>
+                <td><center><img  width="150px" src="../img/<?php echo $row['a_pic']; ?>" alt=""></center></td>
+                <td class="a_name" style="font-size:20px"><?php echo "<center>"; echo $row['a_name']; ?></td>
+                <td class="a_tel" style="font-size:20px"><?php echo "<center>"; echo $row['a_tel']; ?></td>   
+                <td><center><a href="edit_admin.php?a_id=<?=$row['a_id']?>" class="btn btn-danger" style="font-size:20px">Edit</a></center></td>
+                <td><center><a href="delete_admin.php?a_id=<?php echo $row['a_id'];?>"  class="btn btn-warning" style="font-size:20px">Delete</a><center></td>
                 </tr>
                 <?php endwhile ?>
 

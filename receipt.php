@@ -27,19 +27,26 @@ include 'query/connect.php';
         padding:0 25px;
     }
     .hr td {
-    border-bottom: 2px solid rgb(198, 198, 198)!important;
+        border-bottom: 2px solid rgb(198, 198, 198)!important;
     }
     .hr_line td {
-border-top: 1px solid lightgray;
-border-bottom: 1px solid lightgray;
-}
-.have {
-display: block;
-color: white;
-background: black;
-padding: 20px;
-border-radius: 5px;
-}
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+    .have {
+        display: block;
+        color: white;
+        background: black;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .has {
+        display: block;
+        color: white;
+        background: gray;
+        padding: 20px;
+        border-radius: 5px;
+    }
 </style>
 <body>
     <?php
@@ -169,9 +176,14 @@ border-radius: 5px;
             </td>
         </tr>
         <tr>
-            <td colspan=4 align=center style="padding:5px 0px;">
+            <td colspan=2 align=center style="padding:5px 0px;">
                 <span class="have">
-                    ขอบคุณที่ใช้บริการ
+                    Thank You :)
+                </span>
+            </td>
+            <td colspan=2 align=center style="padding:5px 0px;">
+                <span class="has">
+                    <a href= "index.php">back</a>
                 </span>
             </td>
         </tr>

@@ -112,19 +112,16 @@ body {
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px; margin-top:46px; font-family:FC Lamoon; size:20px;"> 
 
-  <!-- Automatic Slideshow Images -->
+<!-- Automatic Slideshow Images -->
  <div class="mySlides w3-display-container w3-center">
-    <img src="img/ipadair2.jpg" style="width:60%">
-    
+    <img src="img/play1.jpg" style="width:55%">
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="img/iphone12.jpg" style="width:30%">
-    
+    <img src="img/Macbookair.png" style="width:70%">
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="img/Macbookair.png" style="width:85%">
-    
-  </div> 
+    <img src="img/play3.jpg" style="width:55%">
+  </div>
 
   <marquee style="font-family: FC Lamoon"><font size="5">ยินดีต้อนรับสู่ Apple Store</font></marquee>
   

@@ -1,7 +1,7 @@
 <?php
   session_start();
   include "../query/connect.php";
-  $sql = "SELECT * FROM member";
+  $sql = "SELECT * FROM member ORDER BY m_id";
   $result = $con->query($sql);
 ?>
 <!DOCTYPE html>
@@ -106,7 +106,7 @@
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
   
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:250px;" id="mySidebar"><br>
             <div class="w3-container">
                 <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
             <i class="fa fa-remove"></i>
@@ -117,8 +117,6 @@
             </div>
             </div>
            
-            
-       
         <div class="w3-bar-block" style="font-size:22px">
             <a href="admin.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal" ><i class="fa fa-th-large fa-fw w3-margin-right" style="font-size:20px"></i>HOME</a> 
             <a href="show_pd.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-apple fa-fw w3-margin-right" style="font-size:20px"></i>PRODUCT</a> 
@@ -138,35 +136,29 @@
         <div class="container-fluid" style="padding-left:300px;">
         <p align = "center" width="25" style="font-size:50px">MEMBER</p>
         <BR>
-        <div style="padding-left=100px">
-        <table width="700" border="0" bgcolor="#FFFFFF" align = "center">
-            <thead>
-                <tr style="font-size:22px">
-                    <td width="25">#</td>
-                    <td width="60">ชื่อ</td>
-                    <td width="60">นามสกุล</td>
-                    <td width="50">วันเกิด</td>
-                    <td width="50">E-mail</td>
-                    <td width="50">Username</td>
-                    <td width="50">Password</td>
-                    <td width="50">เบอร์ติดต่อ</td>
-                    <td width="100">เวลาสมัคร</td>
-                    <td width="100">ลบ</td>
+        <div >
+        <table width="1000" border="0" bgcolor="#FFFFFF" align ="center">
+            <thead style="font-size:22px">
+                <tr>
+                    <td width="200"><strong><center>#</center></strong></td>
+                    <td width="400"><strong><center>ชื่อ</center></strong></td>
+                    <td width="400"><strong><center>นามสกุล</center></strong></td>
+                    <td width="400"><strong><center>วันเกิด</center></strong></td>
+                    <td width="400"><strong><center>เบอร์โทร</center></strong></td>
+                    <td width="400"><strong><center>เวลาสมัคร</center></strong></td>
+                    <td width="400"><strong><center>Delete</center></strong></td>
                 </tr>
             </thead>
             <tbody style="font-size:20px">
             <?php while($row = $result->fetch_assoc()): ?>
                 <tr>
-                <td><?php echo $row['m_id']; ?></td>
+                <td><?php echo "<center>"; echo $row['m_id']; ?></td>
                 <td class="fname"><?php echo $row['m_fname']; ?></td>
                 <td class="lname"><?php echo $row['m_lname']; ?></td>
-                <td><?php echo $row['m_date']; ?></td>
-                <td><?php echo $row['m_maill']; ?></td>
-                <td><?php echo $row['m_username']; ?></td>
-                <td><?php echo $row['m_password']; ?></td>
-                <td><?php echo $row['m_tel']; ?></td>
-                <td width="100"><?php echo $row['m_time']; ?></td>
-                <td align="center"> <a href="delete_member.php?m_id=<?php echo $row['m_id'];?>" class="btn btn-danger ">Delete</a></td>
+                <td><?php echo "<center>"; echo $row['m_date']; ?></td>
+                <td><?php echo "<center>"; echo $row['m_tel']; ?></td>
+                <td width="100"><?php echo "<center>"; echo $row['m_time']; ?></td>
+                <td><center> <a href="delete_member.php?m_id=<?php echo $row['m_id'];?>" class="btn btn-danger" style="font-size:21px">Delete</a></center></td>
                 </tr>
                 <?php endwhile ?>
 
